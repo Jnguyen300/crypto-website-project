@@ -1,0 +1,256 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #00d1b2;
+  margin: 0;
+  padding: 2rem 0; /* Only vertical padding */
+  color: #333;
+}
+
+/* This creates the Headings */
+h1,
+.section-title,
+.form-title {
+  text-align: center;
+  color: #222;
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  margin: 2rem 0 1rem;
+  font-size: 1.8rem;
+}
+
+.form-title {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+/* Creates the Dashboard */
+#dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+/* This creates the Chart */
+canvas {
+  width: 100%;
+  max-width: 700px;
+  height: 500px;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Creates the Market Status(Bearish/Bullish) */
+#marketStatus {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: green;
+  text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #1e1e1e;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+nav a:hover {
+  background-color: #333;
+  color: #00d1b2;
+}
+
+/* Form */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+}
+
+/* Buttons */
+button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  flex: 1;
+  transition: background 0.2s ease-in-out;
+}
+
+.buy-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.sell-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.save-btn {
+  background-color: #2196f3;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Table Containers */
+.table-container,
+.chart-container {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  margin: 0 auto 3rem;
+  overflow-x: auto;
+}
+
+.table-container {
+  max-width: 800px;
+}
+
+.chart-container {
+  flex: 1 1 700px;
+}
+
+/* Table Styling */
+#coinTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+#coinTable th,
+#coinTable td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+#coinTable th {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+#coinTable tr:hover {
+  background-color: #f1f1f1;
+  transition: background 0.2s ease-in-out;
+}
+
+/* Layout Flex */
+.market-layout,
+.chart-and-form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.chart-and-form {
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  form {
+    padding: 1rem;
+  }
+
+  .button-row {
+    flex-direction: column;
+  }
+
+  canvas {
+    height: auto;
+  }
+}
+
+.news-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.news-info {
+  flex: 0 1 300px;
+  font-size: 0.9rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.08);
+  line-height: 1.5;
+}
+
+.news-info p {
+  margin-bottom: 0.75rem;
+}
+
+.news-card-container {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+.site-footer {
+  width: 96%;
+  text-align: center;
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-size: 0.95rem;
+  margin: 0; 
+}
+

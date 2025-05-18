@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latest News</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="about.html">About</a>
+      <a href="help.html">Help</a>
+    </nav>
+
+    <h1 class="section-title"></h1>
+
+    <div class="market-layout">
+  
+      <div class="chart-container">
+        <h2 class="form-title">About These News Articles</h2>
+        <p>
+          <strong>Note:</strong> These articles are generated using the
+          <a href="https://gnews.io/" target="_blank">GNews API</a>.
+        </p>
+        <p>
+          While not every article directly relates to cryptocurrency, these
+          reputable news sources can be used to search and explore
+          crypto-related topics for your own research.
+        </p>
+        <p>
+          This section is designed to help you stay sharp and informed by
+          providing quick access to trending and insightful news.
+        </p>
+      </div>
+
+    
+      <div class="table-container">
+        <table id="newsTable">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Source</th>
+              <th>Published</th>
+            </tr>
+          </thead>
+          <tbody id="newsTableBody">
+            <tr>
+              <td colspan="3">Loading news...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <footer class="site-footer">
+      <p>Copyright 2025 @Crypto Gurus</p>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
