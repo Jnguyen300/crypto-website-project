@@ -142,16 +142,12 @@ function renderLineChart(labels, data, title) {
   document.getElementById("chartTitle").textContent = title;
 }
 
-
-
 //Sends the user preference to the backend 
 async function loadPreferences() {
-  const res = await fetch("http://localhost:8000/api/user-preferences");
+  const res = await fetch("/api/savePreference");
   const data = await res.json();
   console.log("Saved Preferences:", data);
 }
-
-
 
 
 async function submitPreferences(event) {
@@ -160,11 +156,17 @@ async function submitPreferences(event) {
   const user = document.getElementById("user").value;
   const coin = document.getElementById("coin").value;
 
+  async function submitPreferences(event) {
+  event.preventDefault();
+
+  const user = document.getElementById("user").value;
+  const coin = document.getElementById("coin").value;
+
   try {
-    const response = await fetch("/api/savePreferences", {
+    const response = await fetch("/api/savePreference", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ user, coin })
+      body: JSON.stringify({ user, coin }),
     });
 
     const result = await response.json();
@@ -172,16 +174,15 @@ async function submitPreferences(event) {
     if (response.ok) {
       alert("✅ Preferences saved!");
     } else {
-      alert("❌ Failed to save.");
-      console.error(result);
+      alert("❌ Failed to save preference.");
+      console.error("Server response:", result);
     }
   } catch (err) {
-    alert("Network error");
-    console.error(err);
+    console.error("❌ Network error:", err);
+    alert("Something went wrong:\n" + err.message);
   }
 }
-
-
+}
 
 async function loadLatestNews() {
   const tbody = document.getElementById("newsTableBody");
